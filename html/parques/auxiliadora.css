@@ -1,0 +1,393 @@
+* {
+    font-family: monospace, sans-serif;
+}
+
+body {
+    background: #ddd;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    flex-grow: 1;
+    background: #1b1b1b;
+    color: #fff;
+    padding: 10px;
+    padding-inline: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px 1px #555;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+header a {
+    position: absolute;
+    left: 30px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-family: monospace;
+    transition: text-shadow 0.3s;
+}
+
+header a:hover {
+    text-shadow: 0 0 7px #fff;
+    transition: text-shadow 0.3s;
+}
+
+header h1 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 940px){
+    header {
+        height: 145px;
+    }
+
+    header h1 {
+        translate: 0 -20px;
+    }
+
+    header a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0;
+        font-size: 20px;
+        width: 150px;
+        bottom: 0;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+        padding: 10px;
+        padding-inline: 15px;
+        transition: box-shadow 1s;
+        text-align: center;
+    }
+
+    header a:hover {
+        box-shadow: 0 -1px 5px #fff;
+        transition: box-shadow 0.2s;
+    }
+}
+
+.body_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.body_box form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.places, .services, .prima, .brand, .number, button, .cantidad {
+    padding-inline: 35px;
+    padding-block: 10px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 2px solid #1b1b1b;
+    margin: 10px;
+    background: #fff;
+}
+
+.cantidad {
+    padding-inline: 15px;
+    padding-block: 10px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 2px solid #1b1b1b;
+    margin: 10px;
+    background: #fff;
+    width: 100px;
+}
+
+.createpdf {
+    padding-inline: 30px;
+    padding-block: 10px;
+    font-size: 25px;
+    border-radius: 20px;
+    outline: 1px solid #1b1b1b;
+    margin: 10px;
+    background: #fff;
+}
+
+.createpdf:hover {
+    padding-inline: 32px;
+    padding-block: 10px;
+    outline: 2px solid #1b1b1b;
+    box-shadow: 0 0 6px 0px #0f0;
+    cursor: pointer;
+}
+
+.nombre_de_pdf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombre_de_pdf label {
+    font-size: 23px;
+}
+.namepdf {
+    padding-inline: 30px;
+    padding-block: 10px;
+    font-size: 25px;
+    border-radius: 20px;
+    outline: 2px solid #1b1b1b;
+    margin: 10px;
+}
+
+.services div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-box {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview {
+    width: 97vw;
+    padding-block: 15px;
+    background: #1b1b1b;
+    outline: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.preview-title-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-title {
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 1000;
+    padding-block: 10px;
+    background: #1b1b1b;
+    border: none;
+}
+
+.preview-title:hover {
+    outline: none;
+    cursor: default;
+}
+
+.preview-title:focus {
+    outline: none;
+    cursor: default;
+}
+
+.preview-form, .preview-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+}
+
+#preview-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 762px) {
+    #preview-form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.preview-div {
+    padding-block: 10px;
+}
+
+.preview-div label {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.preview-div input {
+    padding-inline: 30px;
+    padding-block: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.integral-box {
+    outline: 4px solid #000;
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 10px;
+    padding-block: 5px;
+    min-height: 94px;
+    display: inline-block;
+    min-width: 230px;
+}
+
+.integral-button {
+    position: absolute;
+    display: inline-block;
+    font-size: 25px;
+    padding-inline: 50px;
+}
+
+@media only screen and (max-width: 910px) {
+    
+    .integral-button {
+        position: static;
+        display: block;
+        font-size: 25px;
+        padding-inline: 50px;
+    }
+
+    .integral-box {
+        outline: 4px solid #000;
+        background-color: #fff;
+        margin: 15px;
+        border-radius: 10px;
+        padding-block: 5px;
+        min-height: 94px;
+        min-width: 230px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.integral-button h3 {
+    padding-block: 5px;
+}
+
+.integral-checkbox {
+    display: none;
+}
+
+.checkbox {
+    width: 120px;
+    height: 40px;
+    background: #aaa;
+    display: inline-block;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.checkbox::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin-block: auto;
+
+    height: 30px;
+    width: 30px;
+    background: #fff;
+    border-radius: 50%;
+    
+    transition: translate .3s;
+}
+
+.integral-checkbox:checked ~ .checkbox {
+    transition: background-color .3s;
+    background: #4f4;
+}
+
+.integral-checkbox:checked ~ .checkbox::before {
+    transition: translate .3s;
+    translate: 80px;
+}
+
+.integral-options {
+    display: none;
+}
+
+.integral-options h3 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.i_integral_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.i_integral_box form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.i_places, .i_services, .i_prima, .i_brand, .i_number, .i_cantidad {
+    padding-inline: 35px;
+    padding-block: 10px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 2px solid #1b1b1b;
+    margin: 10px;
+    background: #fff;
+}
+
+.i_cantidad {
+    padding-inline: 15px;
+    font-size: 25px;
+    width: 100px;
+}
+
+.i_nombre_de_pdf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.i_nombre_de_pdf label {
+    font-size: 23px;
+}
+
+.i_services div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joshua">
+    <meta name="robots" content="index">
+    <link rel="icon" href="../../imgs/pdflogo.png">
+    <link rel="stylesheet" href="auxiliadora.css">
+    <link rel="stylesheet" href="../../normalize.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+    <title>Moms PDFs</title>    
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="back"><i class="fa-solid fa-arrow-left-long fa-beat" style="color: #ffffff; --fa-animation-duration: 3s;"></i> Atrás</a>
+        <div><h1>Parques</h1></div>
+    </header>
+    <div class="body_box">
+        <form id="services" name="services" action="#">
+            <select class="services" name="service_name" onchange="change1(), place(), cantidadFunction(), multiplicacion(), descuento_function(), brand_function(), prima_function()">
+                <option value="0">Jardineras</option>
+                <option value="1">Lotes</option>
+            </select>
+            <select class="places" name="places" onchange="place(), cantidadFunction(), multiplicacion(), descuento_function(), prima_function()">
+                <option value="0">Las Eternidades (8)</option>
+                <option value="1">La Entrada (8)</option>
+                <option value="2">Los Nuevos (8)</option>
+                <option value="3">Bella Vista (8)</option>
+                <option value="4">Las Eternidades (4)</option>
+                <option value="5">La Entrada (4)</option>
+                <option value="6">Los Nuevos (4)</option>
+                <option value="7">Bella Vista (4)</option>
+            </select>
+            <select name="prima" class="prima" onchange="descuento_function(), prima_function()">
+                <option value="5">Prima 5%</option>
+                <option value="10">Prima 10%</option>
+                <option value="15">Prima 15%</option>
+                <option value="20">Prima 20%</option>
+                <option value="25">Prima 25%</option>
+            </select>
+            <select name="descuento" type="number" class="number" onchange=" descuento_function(), prima_function()">
+                <option value="0">Sin Descuento</option>
+                <option value="5">Descuento: 5%</option>
+                <option value="10">Descuento: 10%</option>
+                <option value="15">Descuento: 15%</option>
+                <option value="20">Descuento: 20%</option>
+            </select>
+            <select name="descuento2" type="number" class="number" onchange="descuento_function(), prima_function()">
+                <option value="0">Sin Descuento 2</option>
+                <option value="5">Descuento: 5%</option>
+                <option value="10">Descuento: 10%</option>
+                <option value="15">Descuento: 15%</option>
+                <option value="20">Descuento: 20%</option>
+            </select>
+            <div  class="nombre_de_pdf">
+                <label for="namepdf">Nombre del archivo: </label>
+                <input form="services" id="namepdf" class="namepdf" type="text"  name="namepdf" value="Servicio-Jardineras" oninput="namepdf2()">
+            </div>
+            <div  class="nombre_de_pdf">
+                <label for="cantidad">Cantidad:</label>
+                <input value="1" type="number" form="services" name="cantidad" class="cantidad" id="cantidad" oninput="cantidadFunction(), multiplicacion(), descuento_function(), prima_function()">
+            </div>
+        </form>
+        <form name="box" action="#">
+            <button type="button" onclick="createPDF()" name="i_createpdf" class="createpdf"><b>Crear PDF </b><i class="fa-regular fa-circle-down fa-bounce" style="--fa-bounce-height: -8px; --fa-animation-duration: 1.2s;"></i></button>
+        </form>
+    </div>
+
+    <div class="preview-box">
+        <div class="preview">
+            <form action="#" name="preview_title_form" class="preview-title-form">
+                <input readonly type="text" class="preview-title" name="preview_title" value="Servicio-Jardineras">
+            </form>
+            <form action="#" id="preview-form" name="preview_form" class="preview-form">
+                <div  class="preview-div">
+                    <label for="client_name">Nombre del cliente: </label>
+                    <input form="preview-form" id="client_name" type="text" name="client_name" placeholder="Sin Nombre" oninput="previewNombre()">
+                </div>
+                <div  class="preview-div">
+                    <label for="servicio">Servicio: </label>
+                    <input form="preview-form" id="servicio" type="text" name="servicio_preview" value="Brillante" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="precio">Precio de Lista: </label>
+                    <input form="preview-form" id="precio" type="text" name="precio_preview" value="4500.00" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="descuento">Descuento Especial: </label>
+                    <input form="preview-form" id="descuento" type="text" name="descuento_preview" value="0.00" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="especial">Precio Especial: </label>
+                    <input form="preview-form" id="especial" type="text" name="especial_preview" value="4500.00" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="prima">Prima: </label>
+                    <input form="preview-form" id="prima" type="text" name="prima_preview" value="225.00" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="financiar">Saldo a Financiar: </label>
+                    <input form="preview-form" id="financiar" type="text" name="financiar_preview" value="4275.00" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="cantidadpdf">Cantidad: </label>
+                    <input form="preview-form" id="cantidadpdf" type="text" name="cantidadpdf" value="1" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano1">Año 1: </label>
+                    <input form="preview-form" id="ano1" type="text" name="ano1" value="394.50" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano2">Año 2: </label>
+                    <input form="preview-form" id="ano2" type="text" name="ano2" value="216.02" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano3">Año 3: </label>
+                    <input form="preview-form" id="ano3" type="text" name="ano3" value="157.23" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano4">Año 4: </label>
+                    <input form="preview-form" id="ano4" type="text" name="ano4" value="128.38" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano5">Año 5: </label>
+                    <input form="preview-form" id="ano5" type="text" name="ano5" value="111.49" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano6">Año 6: </label>
+                    <input form="preview-form" id="ano6" type="text" name="ano6" value="111.49" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano7">Año 7: </label>
+                    <input form="preview-form" id="ano7" type="text" name="ano7" value="111.49" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano8">Año 8: </label>
+                    <input form="preview-form" id="ano8" type="text" name="ano8" value="111.49" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano9">Año 9: </label>
+                    <input form="preview-form" id="ano9" type="text" name="ano9" value="111.49" oninput="previewform()">
+                </div>
+                <div  class="preview-div">
+                    <label for="ano10">Año 10: </label>
+                    <input form="preview-form" id="ano10" type="text" name="ano10" value="111.49" oninput="previewform()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="contenidoPDF.js"></script>
+    <script src="services.js"></script>
+    <script src="funerarios.js"></script>
+</body>
