@@ -174,16 +174,16 @@ function prima_function() {
 
     saldoFinanciar = (precioTotal - resultadoPrima).toFixed(2)
 
-    ano1 = (saldoFinanciar / 12).toFixed(2)
-    ano2 = (saldoFinanciar * 0.05250).toFixed(2)
-    ano3 = (saldoFinanciar * 0.03884).toFixed(2)
-    ano4 = (saldoFinanciar * 0.03219).toFixed(2)
-    ano5 = (saldoFinanciar * 0.02833).toFixed(2)
-    ano6 = (saldoFinanciar * 0.02587).toFixed(2)
-    ano7 = (saldoFinanciar * 0.02420).toFixed(2)
-    ano8 = (saldoFinanciar * 0.02302).toFixed(2)
-    ano9 = (saldoFinanciar * 0.02216).toFixed(2)
-    ano10 = (saldoFinanciar * 0.02156).toFixed(2)
+    ano1 = [(saldoFinanciar / 12) + mantenimientoAnual].toFixed(2)
+    ano2 = [(saldoFinanciar * 0.05250) + mantenimientoAnual].toFixed(2)
+    ano3 = [(saldoFinanciar * 0.03884) + mantenimientoAnual].toFixed(2)
+    ano4 = [(saldoFinanciar * 0.03219) + mantenimientoAnual].toFixed(2)
+    ano5 = [(saldoFinanciar * 0.02833) + mantenimientoAnual].toFixed(2)
+    ano6 = [(saldoFinanciar * 0.02587) + mantenimientoAnual].toFixed(2)
+    ano7 = [(saldoFinanciar * 0.02420) + mantenimientoAnual].toFixed(2)
+    ano8 = [(saldoFinanciar * 0.02302) + mantenimientoAnual].toFixed(2)
+    ano9 = [(saldoFinanciar * 0.02216) + mantenimientoAnual].toFixed(2)
+    ano10 = [(saldoFinanciar * 0.02156) + mantenimientoAnual].toFixed(2)
 
 
     prueba()
@@ -204,8 +204,8 @@ function previewChange() {
     document.preview_form.especial_preview.value = precioTotal;
     document.preview_form.prima_preview.value = resultadoPrima;
     document.preview_form.financiar_preview.value = saldoFinanciar;
-    document.preview_form.ano1.value + mantenimientoAnual = ano1;
-    document.preview_form.ano2.value + 48 = ano2;
+    document.preview_form.ano1.value = ano1;
+    document.preview_form.ano2.value = ano2;
     document.preview_form.ano3.value = ano3;
     document.preview_form.ano4.value = ano4;
     document.preview_form.ano5.value = ano5;
