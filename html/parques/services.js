@@ -28,7 +28,7 @@ let clientpdf = false
 
 let cantidadValor = 1
 
-let mantenimientoAnual = 48
+let mantenimientoAnual = 4
 
 prima_function()
 // PRUEBAS
