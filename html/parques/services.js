@@ -28,6 +28,8 @@ let clientpdf = false
 
 let cantidadValor = 1
 
+let mantenimientoAnual = 48
+
 prima_function()
 // PRUEBAS
 function prueba() {
@@ -202,7 +204,7 @@ function previewChange() {
     document.preview_form.especial_preview.value = precioTotal;
     document.preview_form.prima_preview.value = resultadoPrima;
     document.preview_form.financiar_preview.value = saldoFinanciar;
-    document.preview_form.ano1.value = ano1;
+    document.preview_form.ano1.value + mantenimientoAnual = ano1;
     document.preview_form.ano2.value = ano2;
     document.preview_form.ano3.value = ano3;
     document.preview_form.ano4.value = ano4;
