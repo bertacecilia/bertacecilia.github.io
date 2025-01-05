@@ -205,7 +205,7 @@ function previewChange() {
     document.preview_form.prima_preview.value = resultadoPrima;
     document.preview_form.financiar_preview.value = saldoFinanciar;
     document.preview_form.ano1.value + mantenimientoAnual = ano1;
-    document.preview_form.ano2.value = ano2;
+    document.preview_form.ano2.value + 48 = ano2;
     document.preview_form.ano3.value = ano3;
     document.preview_form.ano4.value = ano4;
     document.preview_form.ano5.value = ano5;
