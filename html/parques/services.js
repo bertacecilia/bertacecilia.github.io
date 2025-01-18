@@ -172,7 +172,7 @@ function prima_function() {
     resultadoPrima = ((precioTotal * prima) / 100) + mantenimientoAnual
     resultadoPrima = resultadoPrima.toFixed(2)
 
-    saldoFinanciar = ((precioTotal - resultadoPrima).toFixed(2)) + mantenimientoAnual
+    saldoFinanciar = ((precioTotal - resultadoPrima) + mantenimientoAnual).toFixed(2)
 
     ano1 = ((saldoFinanciar / 12) + mantenimientoAnual).toFixed(2)
     ano2 = ((saldoFinanciar * 0.05250) + mantenimientoAnual).toFixed(2)
