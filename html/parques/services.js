@@ -169,21 +169,21 @@ function descuento_function() {
 
 function prima_function() {
     prima = document.services.prima[document.services.prima.selectedIndex].value;
-    resultadoPrima = (precioTotal * prima) / 100
+    resultadoPrima = ((precioTotal * prima) / 100) + mantenimientoAnual)
     resultadoPrima = resultadoPrima.toFixed(2)
 
     saldoFinanciar = (precioTotal - resultadoPrima).toFixed(2)
 
     ano1 = ((saldoFinanciar / 12) + mantenimientoAnual).toFixed(2)
-    ano2 = ((saldoFinanciar * 0.05250) + (mantenimientoAnual * 2)).toFixed(2)
-    ano3 = ((saldoFinanciar * 0.03884) + (mantenimientoAnual * 3)).toFixed(2)
-    ano4 = ((saldoFinanciar * 0.03219) + (mantenimientoAnual * 4)).toFixed(2)
-    ano5 = ((saldoFinanciar * 0.02833) + (mantenimientoAnual * 5)).toFixed(2)
-    ano6 = ((saldoFinanciar * 0.02587) + (mantenimientoAnual * 6)).toFixed(2)
-    ano7 = ((saldoFinanciar * 0.02420) + (mantenimientoAnual * 7)).toFixed(2)
-    ano8 = ((saldoFinanciar * 0.02302) + (mantenimientoAnual * 8)).toFixed(2)
-    ano9 = ((saldoFinanciar * 0.02216) + (mantenimientoAnual * 9)).toFixed(2)
-    ano10 = ((saldoFinanciar * 0.02156) + (mantenimientoAnual * 10)).toFixed(2)
+    ano2 = ((saldoFinanciar * 0.05250) + mantenimientoAnual).toFixed(2)
+    ano3 = ((saldoFinanciar * 0.03884) + mantenimientoAnual).toFixed(2)
+    ano4 = ((saldoFinanciar * 0.03219) + mantenimientoAnual).toFixed(2)
+    ano5 = ((saldoFinanciar * 0.02833) + mantenimientoAnual).toFixed(2)
+    ano6 = ((saldoFinanciar * 0.02587) + mantenimientoAnual).toFixed(2)
+    ano7 = ((saldoFinanciar * 0.02420) + mantenimientoAnual).toFixed(2)
+    ano8 = ((saldoFinanciar * 0.02302) + mantenimientoAnual).toFixed(2)
+    ano9 = ((saldoFinanciar * 0.02216) + mantenimientoAnual).toFixed(2)
+    ano10 = ((saldoFinanciar * 0.02156) + mantenimientoAnual).toFixed(2)
 
 
     prueba()
