@@ -183,7 +183,7 @@ function prima_function() {
     ano7 = ((saldoFinanciar * 0.02420) + mantenimientoAnual).toFixed(2)
     ano8 = ((saldoFinanciar * 0.02302) + mantenimientoAnual).toFixed(2)
     ano9 = ((saldoFinanciar * 0.02216) + mantenimientoAnual).toFixed(2)
-    ano10 = ((saldoFinanciar * 0.02156) + mantenimientoAnual).toFixed(2)
+    ano10 = ((saldoFinanciar * 0.02153) + mantenimientoAnual).toFixed(2)
 
 
     prueba()
