@@ -169,12 +169,10 @@ function descuento_function() {
 
 function prima_function() {
     prima = document.services.prima[document.services.prima.selectedIndex].value;
-    resultadoPrima = ((precioTotal * prima) / 100)
+    resultadoPrima = ((precioTotal * prima) / 100) + mantenimientoAnual
     resultadoPrima = resultadoPrima.toFixed(2)
 
-    saldoFinanciar = (precioTotal - resultadoPrima).toFixed(2)
-
-    resultadoPrima = resultadoPrima + mantenimientoAnual
+    saldoFinanciar = ((precioTotal - resultadoPrima).toFixed(2)) + mantenimientoAnual
 
     ano1 = ((saldoFinanciar / 12) + mantenimientoAnual).toFixed(2)
     ano2 = ((saldoFinanciar * 0.05250) + mantenimientoAnual).toFixed(2)
