@@ -324,7 +324,19 @@ function integralChecking() {
         saldoFinanciar = (precioTotal - resultadoPrima).toFixed(2)
     }
 
-    ano1 = (saldoFinanciar / 12).toFixed(2)
+    if (integralChecked.checked) {
+        ano1 = (saldoFinanciar / 12).toFixed(2)
+    ano2 = ((saldoFinanciar * 0.05053) + mantenimientoAnual).toFixed(2)
+    ano3 = ((saldoFinanciar * 0.03678) + mantenimientoAnual).toFixed(2)
+    ano4 = ((saldoFinanciar * 0.03003) + mantenimientoAnual).toFixed(2)
+    ano5 = ((saldoFinanciar * 0.02608) + mantenimientoAnual).toFixed(2)
+    ano6 = ((saldoFinanciar * 0.02352) + mantenimientoAnual).toFixed(2)
+    ano7 = ((saldoFinanciar * 0.02176) + mantenimientoAnual).toFixed(2)
+    ano8 = ((saldoFinanciar * 0.02049) + mantenimientoAnual).toFixed(2)
+    ano9 = ((saldoFinanciar * 0.01955) + mantenimientoAnual).toFixed(2)
+    ano10 = ((saldoFinanciar * 0.01883) + mantenimientoAnual).toFixed(2)
+    } else {
+        ano1 = (saldoFinanciar / 12).toFixed(2)
     ano2 = (saldoFinanciar * 0.05053).toFixed(2)
     ano3 = (saldoFinanciar * 0.03678).toFixed(2)
     ano4 = (saldoFinanciar * 0.03003).toFixed(2)
@@ -334,4 +346,5 @@ function integralChecking() {
     ano8 = (saldoFinanciar * 0.02049).toFixed(2)
     ano9 = (saldoFinanciar * 0.01955).toFixed(2)
     ano10 = (saldoFinanciar * 0.01883).toFixed(2)
+    }
 }
