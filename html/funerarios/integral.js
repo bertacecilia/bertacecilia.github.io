@@ -22,6 +22,8 @@ let i_brand = "La Auxiliadora"
 
 let integralChecked = document.getElementById("integral-checkbox")
 
+let mantenimientoAnual = 4
+
 // let serviciopdf = "Brillante"
 // let preciopdf = 4500.00.toFixed(2)
 // let descuentopdf = 0.00.toFixed(2)
@@ -310,13 +312,14 @@ function integralChecking() {
     }
 
     if (integralChecked.checked) {
-        resultadoPrima = ((precioIntegral * prima) / 100).toFixed(2)
+        resultadoPrima = ((precioIntegral * prima) / 100) + mantenimientoAnual
+        resultadoPrima = resultadoPrima.toFixed(2)
     } else {
         resultadoPrima = ((precioTotal * prima) / 100).toFixed(2)
     }
 
     if (integralChecked.checked) {
-        saldoFinanciar = (precioIntegral - resultadoPrima).toFixed(2)
+        saldoFinanciar = ((precioIntegral - resultadoPrima) + mantenimientoAnual).toFixed(2)
     } else {
         saldoFinanciar = (precioTotal - resultadoPrima).toFixed(2)
     }
