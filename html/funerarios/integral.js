@@ -10,9 +10,9 @@ let i_servicioLugar = i_servicio + i_lugarValue
 let i_descuento = 0.00.toFixed(2)
 let i_descuento2 = 0.00.toFixed(2)
 let i_descuentoTotal = 0.00.toFixed(2)
-let i_precio = 22000.00.toFixed(2)
-let i_precioTotal = 22000.00.toFixed(2)
-let i_saldoFinanciar = 20900.00.toFixed(2)
+let i_precio = 22190.00.toFixed(2)
+let i_precioTotal = 22190.00.toFixed(2)
+let i_saldoFinanciar = 20805.00.toFixed(2)
 
 let i_descuentoPorcentaje = 0;
 let i_descuento2Value = 0;
