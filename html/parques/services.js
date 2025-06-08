@@ -1,7 +1,7 @@
 // Valores declarados e inicializados, con cambios por delante.
 let opt_0 = ["Jardineras de 8", "Jardineras de 4"];
-let opt_1 = ["Propiedades (AC)", "Propiedades (BC)"];
-
+let opt_1 = ["Propiedades (AC)", "Propiedades (BC)","Pirineos 1"];
+let opt_2 = ["Pergolas", "Pergolas 2 (1 y 4)", "Bella Vista"];
 
 let lugar = "Jardineras de 8"
 let lugarValue = 0
@@ -119,6 +119,14 @@ function precio_function() {
         precio = 6590.00.toFixed(2)
     } else if (servicioLugar == "Lotes1") {
         precio = 12190.00.toFixed(2)
+    } else if (servicioLugar == "Lotes2") {
+        precio = 2100.00.toFixed(2)
+    } else if (servicioLugar == "Mausoleos0") {
+        precio = 2190.00.toFixed(2)
+    } else if (servicioLugar == "Mausoleos1") {
+        precio = 1900.00.toFixed(2)
+    } else if (servicioLugar == "Mausoleos2") {
+        precio = 1900.00.toFixed(2)
     }
 }
 
