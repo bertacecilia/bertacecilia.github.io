@@ -1,9 +1,9 @@
 // Valores declarados e inicializados, con cambios por delante.
-let opt_0 = ["Las Eternidades (8)", "La Entrada (8)", "Los Nuevos (8)", "Bella Vista (8)", "Las Eternidades (4)", "La Entrada (4)", "Los Nuevos (4)", "Bella Vista (4)"];
-let opt_1 = ["Las Eternidades (BC)", "Las Eternidades (AC)", "La Entrada (BC)", "La Entrada (AC)", "Los Nuevos (BC)", "Los Nuevos (AC)", "Los Nuevos (AB)", "Los Nuevos (AA)"];
+let opt_0 = ["Jardineras de 8", "Jardineras de 4"];
+let opt_1 = ["Propiedades (AC)", "Propiedades (BC)"];
 
 
-let lugar = "Las Eternidades (8)"
+let lugar = "Jardineras de 8"
 let lugarValue = 0
 let servicio = "Jardineras"
 let servicioLugar = servicio + lugarValue
@@ -12,10 +12,10 @@ let prima = 5
 let descuento = 0.00.toFixed(2)
 let descuento2 = 0.00.toFixed(2)
 let descuentoTotal = 0.00.toFixed(2)
-let precio = 22000.00.toFixed(2)
-let resultadoPrima = 1100.00.toFixed(2)
-let precioTotal = 22000.00.toFixed(2)
-let saldoFinanciar = 20900.00.toFixed(2)
+let precio = 22190.00.toFixed(2)
+let resultadoPrima = 1195.00.toFixed(2)
+let precioTotal = 22190.00.toFixed(2)
+let saldoFinanciar = 20805.00.toFixed(2)
 
 let descuentoPorcentaje = 0;
 let descuento2Value = 0;
@@ -112,37 +112,13 @@ function brand_function() {
 function precio_function() {
 
     if (servicioLugar == "Jardineras0"){
-        precio = 22000.00.toFixed(2)
+        precio = 22190.00.toFixed(2)
     } else if (servicioLugar == "Jardineras1") {
-        precio = 16500.00.toFixed(2)
-    } else if (servicioLugar == "Jardineras2") {
-        precio = 14000.00.toFixed(2)
-    } else if (servicioLugar == "Jardineras3") {
-        precio = 22000.00.toFixed(2)
-    } else if (servicioLugar == "Jardineras4") {
-        precio = 17000.00.toFixed(2)
-    } else if (servicioLugar == "Jardineras5") {
-        precio = 13000.00.toFixed(2)
-    } else if (servicioLugar == "Jardineras6") {
-        precio = 10000.00.toFixed(2)
-    } else if (servicioLugar == "Jardineras7") {
-        precio = 17000.00.toFixed(2)
+        precio = 17190.00.toFixed(2)
     } else if (servicioLugar == "Lotes0") {
-        precio = 12000.00.toFixed(2)
+        precio = 6590.00.toFixed(2)
     } else if (servicioLugar == "Lotes1") {
-        precio = 6400.00.toFixed(2)
-    } else if (servicioLugar == "Lotes2") {
-        precio = 9500.00.toFixed(2)
-    } else if (servicioLugar == "Lotes3") {
-        precio = 5150.00.toFixed(2)
-    } else if (servicioLugar == "Lotes4") {
-        precio = 8500.00.toFixed(2)
-    } else if (servicioLugar == "Lotes5") {
-        precio = 4500.00.toFixed(2)
-    } else if (servicioLugar == "Lotes6") {
-        precio = 3800.00.toFixed(2)
-    } else if (servicioLugar == "Lotes7") {
-        precio = 3100.00.toFixed(2)
+        precio = 12190.00.toFixed(2)
     }
 }
 
