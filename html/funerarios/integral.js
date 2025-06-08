@@ -325,7 +325,7 @@ function integralChecking() {
     }
 
     if (integralChecked.checked) {
-        ano1 = ((saldoFinanciar / 12).toFixed(2) + mantenimientoAnual).toFixed(2)
+        ano1 = ((saldoFinanciar / 12) + mantenimientoAnual).toFixed(2)
     ano2 = ((saldoFinanciar * 0.05053) + mantenimientoAnual).toFixed(2)
     ano3 = ((saldoFinanciar * 0.03678) + mantenimientoAnual).toFixed(2)
     ano4 = ((saldoFinanciar * 0.03003) + mantenimientoAnual).toFixed(2)
