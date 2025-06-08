@@ -1,6 +1,6 @@
 // Valores declarados e inicializados, con cambios por delante.
 let i_opt_0 = ["Las Eternidades (8)", "La Entrada (8)", "Los Nuevos (8)", "Bella Vista (8)", "Las Eternidades (4)", "La Entrada (4)", "Los Nuevos (4)", "Bella Vista (4)"];
-let i_opt_1 = ["Las Eternidades (BC)", "Las Eternidades (AC)", "La Entrada (BC)", "La Entrada (AC)", "Los Nuevos (BC)", "Los Nuevos (AC)", "Los Nuevos (AB)", "Los Nuevos (AA)"];
+let i_opt_1 = ["Propiedades (AC)", "Propiedades (BC)"];
 
 let i_lugar = "Las Eternidades (8)"
 let i_lugarValue = 0
@@ -122,21 +122,9 @@ function i_precio_function() {
     } else if (i_servicioLugar == "Jardineras7") {
         i_precio = 17000.00.toFixed(2)
     } else if (i_servicioLugar == "Lotes0") {
-        i_precio = 12000.00.toFixed(2)
+        i_precio = 6590.00.toFixed(2)
     } else if (i_servicioLugar == "Lotes1") {
-        i_precio = 6400.00.toFixed(2)
-    } else if (i_servicioLugar == "Lotes2") {
-        i_precio = 9500.00.toFixed(2)
-    } else if (i_servicioLugar == "Lotes3") {
-        i_precio = 5150.00.toFixed(2)
-    } else if (i_servicioLugar == "Lotes4") {
-        i_precio = 8500.00.toFixed(2)
-    } else if (i_servicioLugar == "Lotes5") {
-        i_precio = 4500.00.toFixed(2)
-    } else if (i_servicioLugar == "Lotes6") {
-        i_precio = 3800.00.toFixed(2)
-    } else if (i_servicioLugar == "Lotes7") {
-        i_precio = 3100.00.toFixed(2)
+        i_precio = 12190.00.toFixed(2)
     }
 
     if (integralChecked.checked) {
